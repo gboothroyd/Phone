@@ -19,24 +19,16 @@ public class Phone {
 	@GeneratedValue
 	@Column(name="ID")
 	private int id;
-	
-	
 	@Column(name="NAME")
-private String name;
-	
+	private String name;
 	@Column(name="RELEASE_DATE")
-private LocalDate releaseDate;
-
-@Column(name="COLOR")
-private String color;
+	private LocalDate releaseDate;
+	@Column(name="COLOR")
+	private String color;
 
 	public Phone() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	
-	
-	
 
 	public Phone(String name, LocalDate releaseDate, String color) {
 		super();
@@ -44,10 +36,6 @@ private String color;
 		this.releaseDate = releaseDate;
 		this.color = color;
 	}
-
-
-
-
 
 	/**
 	 * @return the name
