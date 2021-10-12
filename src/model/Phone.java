@@ -1,13 +1,33 @@
+package model;
 import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * @author booth - gboothroyd@dmacc.edu
  *CIS175 - Fall 2021
  * Oct 6, 2021
  */
+@Entity
+@Table(name="phones")
 public class Phone {
+	@Id
+	@GeneratedValue
+	@Column(name="ID")
+	private int id;
+	
+	
+	@Column(name="NAME")
 private String name;
+	
+	@Column(name="RELEASE_DATE")
 private LocalDate releaseDate;
+
+@Column(name="COLOR")
 private String color;
 
 	public Phone() {
@@ -15,6 +35,19 @@ private String color;
 	}
 	
 	
+	
+	
+
+	public Phone(String name, LocalDate releaseDate, String color) {
+		super();
+		this.name = name;
+		this.releaseDate = releaseDate;
+		this.color = color;
+	}
+
+
+
+
 
 	/**
 	 * @return the name
@@ -56,6 +89,10 @@ private String color;
 	 */
 	public void setColor(String color) {
 		this.color = color;
+	}
+	
+	public String returnPhoneDetails() {
+		return	this.name + ": " +	this.color + ", " + this.releaseDate;
 	}
 	
 	

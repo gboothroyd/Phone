@@ -1,15 +1,16 @@
+package controller;
 
 /**
  * @author booth - gboothroyd@dmacc.edu
  *CIS175 - Fall 2021
- * Oct 6, 2021
+ * Oct 11, 2021
  */
-public class Details {
+public class PhoneHelper {
 
 	/**
 	 * 
 	 */
-	public Details() {
+	public PhoneHelper() {
 		// TODO Auto-generated constructor stub
 	}
 
