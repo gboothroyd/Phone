@@ -11,6 +11,7 @@
 <form action = "createNewListServlet" method="post">
 List Name: <input type ="text" name = "listName"><br />
 Service Provider Name: <input type = "text" name = "providerName"><br />
+Service Provider Year Established: <input type = "text" name = "providerYearEstablished"><br />
 Available Items:<br />
 <select name="allItemsToAdd" multiple size="6">
 <c:forEach items="${requestScope.allItems}" var="currentitem">

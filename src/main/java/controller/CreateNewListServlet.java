@@ -39,6 +39,7 @@ public class CreateNewListServlet extends HttpServlet {
 		System.out.println("List Name: " + listName);
 		
 		String providerName = request.getParameter("providerName");
+		int providerYearEstablished = Integer.parseInt(request.getParameter("providerYearEstablished"));
 		
 		String[] selectedItems = request.getParameterValues("allItemsToAdd");
 		
@@ -53,7 +54,7 @@ public class CreateNewListServlet extends HttpServlet {
 		selectedItemsInList.add(p);
 		}
 		}
-		ServiceProvider provider = new ServiceProvider(providerName);
+		ServiceProvider provider = new ServiceProvider(providerName, providerYearEstablished);
 		Details pld = new Details(listName, provider);
 		pld.setListOfPhones(selectedItemsInList);
 		DetailsHelper plh = new DetailsHelper();
