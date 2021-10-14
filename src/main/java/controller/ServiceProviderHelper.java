@@ -40,7 +40,7 @@ public class ServiceProviderHelper {
 		// TODO Auto-generated method stub
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
-		TypedQuery<ServiceProvider> typedQuery = em.createQuery("select prov from ServiceProvider prov where prov.serviceProviderName = :selectedName", ServiceProvider.class);
+		TypedQuery<ServiceProvider> typedQuery = em.createQuery("select prov from ServiceProvider prov where prov.name = :selectedName", ServiceProvider.class);
 		typedQuery.setParameter("selectedName", nameToLookUp);
 		typedQuery.setMaxResults(1);
 		
